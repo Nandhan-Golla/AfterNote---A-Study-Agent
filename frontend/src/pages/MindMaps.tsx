@@ -38,7 +38,7 @@ const MindMaps: React.FC = () => {
           <h1 className="text-3xl font-bold text-white">Mind Maps</h1>
           <p className="text-slate-300 mt-1">Visualize knowledge with AI-generated mind maps</p>
         </div>
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
           <Plus className="w-4 h-4 mr-2" />
           Create Mind Map
         </button>
@@ -78,7 +78,7 @@ const MindMaps: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-300 cursor-pointer group overflow-hidden"
+            className="bg-gray-800 rounded-xl border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-pointer group overflow-hidden"
           >
             {/* Mind Map Preview */}
             <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 relative overflow-hidden">
@@ -86,7 +86,7 @@ const MindMaps: React.FC = () => {
                 {/* Constellation-style preview */}
                 <div className="relative w-full h-full">
                   {/* Central node */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
                     <Brain className="w-8 h-8 text-white" />
                   </div>
                   
@@ -160,13 +160,13 @@ const MindMaps: React.FC = () => {
 
               {/* Actions */}
               <div className="flex space-x-2">
-                <button className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm font-medium py-2 px-3 rounded-lg transition-all duration-300">
+                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-3 rounded-lg transition-all duration-300">
                   Open
                 </button>
-                <button className="bg-slate-700 hover:bg-slate-600 text-slate-300 p-2 rounded-lg transition-colors">
+                <button className="bg-gray-700 hover:bg-slate-600 text-slate-300 p-2 rounded-lg transition-colors">
                   <Share className="w-4 h-4" />
                 </button>
-                <button className="bg-slate-700 hover:bg-slate-600 text-slate-300 p-2 rounded-lg transition-colors">
+                <button className="bg-gray-700 hover:bg-slate-600 text-slate-300 p-2 rounded-lg transition-colors">
                   <Download className="w-4 h-4" />
                 </button>
               </div>
@@ -180,7 +180,7 @@ const MindMaps: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+        className="bg-gray-800 rounded-xl p-6 border border-gray-700"
       >
         <h2 className="text-xl font-semibold text-white mb-4">Create New Mind Map</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -196,7 +196,7 @@ const MindMaps: React.FC = () => {
             <div className="text-sm opacity-90">Start with a blank canvas</div>
           </button>
           
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-left">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-left">
             <Share className="w-6 h-6 mb-2" />
             <div className="font-semibold">Collaborative</div>
             <div className="text-sm opacity-90">Invite others to collaborate</div>
@@ -216,7 +216,7 @@ const MindMaps: React.FC = () => {
           <p className="text-slate-500 mb-6">
             Create your first mind map to visualize and organize your knowledge
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
             Create Your First Mind Map
           </button>
         </motion.div>

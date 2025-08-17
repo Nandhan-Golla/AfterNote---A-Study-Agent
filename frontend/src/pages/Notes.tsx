@@ -52,7 +52,7 @@ const Notes: React.FC = () => {
         </div>
         <button
           onClick={() => setShowCreateModal(true)}
-          className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center"
         >
           <Plus className="w-4 h-4 mr-2" />
           New Note
@@ -67,7 +67,7 @@ const Notes: React.FC = () => {
           placeholder="Search notes, tags, or content..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+          className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
         />
       </div>
 
@@ -79,7 +79,7 @@ const Notes: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300 cursor-pointer group"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 cursor-pointer group"
           >
             <div className="flex items-start justify-between mb-4">
               <FileText className="w-5 h-5 text-blue-400 flex-shrink-0" />
@@ -111,7 +111,7 @@ const Notes: React.FC = () => {
               {note.aiTags.slice(0, 3).map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300"
+                  className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-gray-700 text-slate-300"
                 >
                   <Tag className="w-3 h-3 mr-1" />
                   {tag}
@@ -156,7 +156,7 @@ const Notes: React.FC = () => {
           {!searchTerm && (
             <button
               onClick={() => setShowCreateModal(true)}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300"
             >
               Create Your First Note
             </button>
@@ -170,19 +170,19 @@ const Notes: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-slate-800 rounded-xl p-6 w-full max-w-2xl border border-slate-700"
+            className="bg-gray-800 rounded-xl p-6 w-full max-w-2xl border border-gray-700"
           >
             <h2 className="text-xl font-semibold text-white mb-4">Create New Note</h2>
             <div className="space-y-4">
               <input
                 type="text"
                 placeholder="Note title..."
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
               <textarea
                 placeholder="Start writing your note... AI will automatically generate tags and summary!"
                 rows={8}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
               />
             </div>
             <div className="flex justify-end space-x-3 mt-6">
@@ -192,7 +192,7 @@ const Notes: React.FC = () => {
               >
                 Cancel
               </button>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
                 Create Note
               </button>
             </div>

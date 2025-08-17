@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
   const stats = [
     { name: 'Notes Created', value: '24', icon: FileText, color: 'from-blue-500 to-cyan-500' },
     { name: 'Documents Uploaded', value: '12', icon: BookOpen, color: 'from-green-500 to-emerald-500' },
-    { name: 'Mind Maps', value: '8', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { name: 'Mind Maps', value: '8', icon: Brain, color: 'from-blue-500 to-blue-600' },
     { name: 'Study Streak', value: '15 days', icon: Target, color: 'from-orange-500 to-red-500' },
   ];
 
@@ -50,7 +50,7 @@ const Dashboard: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -70,7 +70,7 @@ const Dashboard: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+        className="bg-gray-800 rounded-xl p-6 border border-gray-700"
       >
         <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
           <Zap className="w-5 h-5 mr-2 text-yellow-400" />
@@ -83,7 +83,7 @@ const Dashboard: React.FC = () => {
           <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
             Upload Document
           </button>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
             Generate Mind Map
           </button>
         </div>
@@ -95,7 +95,7 @@ const Dashboard: React.FC = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+          className="bg-gray-800 rounded-xl p-6 border border-gray-700"
         >
           <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
             <Clock className="w-5 h-5 mr-2 text-blue-400" />
@@ -103,7 +103,7 @@ const Dashboard: React.FC = () => {
           </h2>
           <div className="space-y-4">
             {recentActivity.map((activity, index) => (
-              <div key={index} className="flex items-center space-x-4 p-3 rounded-lg hover:bg-slate-700/30 transition-colors">
+              <div key={index} className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-700/30 transition-colors">
                 <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                 <div className="flex-1">
                   <p className="text-white font-medium">{activity.action}</p>
@@ -120,7 +120,7 @@ const Dashboard: React.FC = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+          className="bg-gray-800 rounded-xl p-6 border border-gray-700"
         >
           <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
@@ -132,7 +132,7 @@ const Dashboard: React.FC = () => {
                 <span className="text-slate-300">Weekly Goal</span>
                 <span className="text-white font-medium">75%</span>
               </div>
-              <div className="w-full bg-slate-700 rounded-full h-2">
+              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full" style={{ width: '75%' }}></div>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Dashboard: React.FC = () => {
                 <span className="text-slate-300">Notes Reviewed</span>
                 <span className="text-white font-medium">60%</span>
               </div>
-              <div className="w-full bg-slate-700 rounded-full h-2">
+              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full" style={{ width: '60%' }}></div>
               </div>
             </div>
@@ -150,8 +150,8 @@ const Dashboard: React.FC = () => {
                 <span className="text-slate-300">Quiz Performance</span>
                 <span className="text-white font-medium">85%</span>
               </div>
-              <div className="w-full bg-slate-700 rounded-full h-2">
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '85%' }}></div>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ const Dashboard: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30 text-center"
+        className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 text-center"
       >
         <Star className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">You're on fire! 🔥</h3>

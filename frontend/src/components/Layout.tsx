@@ -94,8 +94,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   to={item.href}
                   className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'text-slate-300 hover:text-white hover:bg-gray-700'
                   }`}
                   onClick={() => setSidebarOpen(false)}
                 >
@@ -107,7 +107,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </nav>
 
           {/* Footer */}
-          <div className="p-6 border-t border-slate-700">
+          <div className="p-6 border-t border-gray-700">
             <div className="text-xs text-slate-400 text-center">
               AfterNote v1.0.0
               <br />
@@ -120,7 +120,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top bar */}
-        <header className="bg-slate-800/50 backdrop-blur-xl border-b border-slate-700 px-6 py-4">
+        <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
           <div className="flex items-center justify-between">
             <button
               onClick={() => setSidebarOpen(true)}

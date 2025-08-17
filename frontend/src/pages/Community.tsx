@@ -67,7 +67,7 @@ const Community: React.FC = () => {
           <h1 className="text-3xl font-bold text-white">Community</h1>
           <p className="text-slate-300 mt-1">Connect, share, and learn together</p>
         </div>
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
           <Share className="w-4 h-4 mr-2" />
           Share Content
         </button>
@@ -78,7 +78,7 @@ const Community: React.FC = () => {
         {[
           { label: 'Active Students', value: '12,847', icon: Users, color: 'from-blue-500 to-cyan-500' },
           { label: 'Shared Notes', value: '3,429', icon: Share, color: 'from-green-500 to-emerald-500' },
-          { label: 'Study Groups', value: '156', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },
+          { label: 'Study Groups', value: '156', icon: MessageCircle, color: 'from-blue-500 to-blue-600' },
           { label: 'Total XP', value: '2.4M', icon: Zap, color: 'from-orange-500 to-red-500' }
         ].map((stat, index) => (
           <motion.div
@@ -86,7 +86,7 @@ const Community: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-slate-400">{stat.label}</span>
@@ -105,7 +105,7 @@ const Community: React.FC = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+          className="bg-gray-800 rounded-xl p-6 border border-gray-700"
         >
           <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
             <Trophy className="w-5 h-5 mr-2 text-yellow-400" />
@@ -117,8 +117,8 @@ const Community: React.FC = () => {
                 key={user.username}
                 className={`flex items-center space-x-4 p-3 rounded-lg transition-colors ${
                   user.username === 'You' 
-                    ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30' 
-                    : 'hover:bg-slate-700/30'
+                    ? 'bg-gradient-to-r from-gray-700 to-gray-800 border border-gray-600' 
+                    : 'hover:bg-gray-700/30'
                 }`}
               >
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-lg ${
@@ -160,7 +160,7 @@ const Community: React.FC = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+          className="bg-gray-800 rounded-xl p-6 border border-gray-700"
         >
           <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
             <Users className="w-5 h-5 mr-2 text-blue-400" />
@@ -170,7 +170,7 @@ const Community: React.FC = () => {
             {studyGroups.map((group) => (
               <div
                 key={group.id}
-                className="p-4 rounded-lg border border-slate-700 hover:border-slate-600 transition-colors"
+                className="p-4 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors"
               >
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -183,7 +183,7 @@ const Community: React.FC = () => {
                 <div className="flex items-center justify-between mt-3">
                   <div className="flex items-center space-x-4 text-sm text-slate-400">
                     <span>{group.members} members</span>
-                    <span className="bg-slate-700 px-2 py-1 rounded-full text-xs">{group.subject}</span>
+                    <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">{group.subject}</span>
                   </div>
                   <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-sm font-medium py-1 px-3 rounded-lg transition-all duration-300">
                     Join
@@ -193,7 +193,7 @@ const Community: React.FC = () => {
             ))}
           </div>
           
-          <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300">
+          <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300">
             Create Study Group
           </button>
         </motion.div>
@@ -204,7 +204,7 @@ const Community: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+        className="bg-gray-800 rounded-xl p-6 border border-gray-700"
       >
         <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
           <Share className="w-5 h-5 mr-2 text-green-400" />
@@ -215,7 +215,7 @@ const Community: React.FC = () => {
           {sharedNotes.map((note) => (
             <div
               key={note.id}
-              className="p-4 rounded-lg border border-slate-700 hover:border-slate-600 transition-colors"
+              className="p-4 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors"
             >
               <h3 className="font-semibold text-white mb-2">{note.title}</h3>
               <p className="text-sm text-slate-400 mb-3">by {note.author}</p>
@@ -227,7 +227,7 @@ const Community: React.FC = () => {
                     <span>{note.likes}</span>
                   </div>
                   <span>{note.downloads} downloads</span>
-                  <span className="bg-slate-700 px-2 py-1 rounded-full text-xs">{note.subject}</span>
+                  <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">{note.subject}</span>
                 </div>
                 <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-sm font-medium py-1 px-3 rounded-lg transition-all duration-300">
                   Download
@@ -243,7 +243,7 @@ const Community: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
+        className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600"
       >
         <div className="flex items-center mb-4">
           <Zap className="w-6 h-6 text-yellow-400 mr-2" />
@@ -261,7 +261,7 @@ const Community: React.FC = () => {
               className={`p-4 rounded-lg text-center transition-all duration-300 ${
                 badge.earned 
                   ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30' 
-                  : 'bg-slate-700/50 border border-slate-600 opacity-50'
+                  : 'bg-gray-700/50 border border-gray-600 opacity-50'
               }`}
             >
               <div className="text-2xl mb-2">{badge.icon}</div>

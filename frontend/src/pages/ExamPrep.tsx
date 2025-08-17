@@ -43,7 +43,7 @@ const ExamPrep: React.FC = () => {
           <h1 className="text-3xl font-bold text-white">Exam Prep</h1>
           <p className="text-slate-300 mt-1">AI-powered exam preparation and practice</p>
         </div>
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
           <Zap className="w-4 h-4 mr-2" />
           Generate Exam
         </button>
@@ -57,7 +57,7 @@ const ExamPrep: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-slate-400">{stat.label}</span>
@@ -81,7 +81,7 @@ const ExamPrep: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700"
+        className="bg-gray-800 rounded-xl p-6 border border-gray-700"
       >
         <h2 className="text-xl font-semibold text-white mb-6 flex items-center">
           <Target className="w-5 h-5 mr-2 text-orange-400" />
@@ -100,7 +100,7 @@ const ExamPrep: React.FC = () => {
             <div className="text-sm opacity-90">Beat the clock</div>
           </button>
           
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-left">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 text-left">
             <BarChart3 className="w-6 h-6 mb-2" />
             <div className="font-semibold">Weak Topics</div>
             <div className="text-sm opacity-90">Focus on problem areas</div>
@@ -118,7 +118,7 @@ const ExamPrep: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 + index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
           >
             <div className="flex items-start justify-between">
               <div className="flex items-start space-x-4 flex-1">
@@ -170,7 +170,7 @@ const ExamPrep: React.FC = () => {
                   <Play className="w-4 h-4 mr-2" />
                   Start
                 </button>
-                <button className="bg-slate-700 hover:bg-slate-600 text-slate-300 text-sm font-medium py-2 px-4 rounded-lg transition-colors">
+                <button className="bg-gray-700 hover:bg-slate-600 text-slate-300 text-sm font-medium py-2 px-4 rounded-lg transition-colors">
                   Review
                 </button>
               </div>
@@ -184,7 +184,7 @@ const ExamPrep: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
+        className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600"
       >
         <div className="flex items-center mb-4">
           <Zap className="w-6 h-6 text-yellow-400 mr-2" />
@@ -198,7 +198,7 @@ const ExamPrep: React.FC = () => {
           <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300">
             Upload Syllabus
           </button>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300">
             Generate from Notes
           </button>
         </div>
@@ -216,7 +216,7 @@ const ExamPrep: React.FC = () => {
           <p className="text-slate-500 mb-6">
             Generate your first practice exam to start preparing for your tests
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
             Generate First Exam
           </button>
         </motion.div>

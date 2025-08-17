@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply bg-slate-900 text-white;
+    @apply bg-gray-900 text-white;
   }
 }
 
@@ -34,15 +34,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-800;
+  @apply bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-600 rounded-full;
+  @apply bg-gray-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-slate-500;
+  @apply bg-gray-500;
 }
 
 /* Animations */

@@ -57,14 +57,14 @@ const Documents: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700"
+        className="bg-gray-800 rounded-xl border border-gray-700"
       >
         <div
           {...getRootProps()}
           className={`p-8 text-center cursor-pointer transition-all duration-300 rounded-xl ${
             isDragActive 
               ? 'border-2 border-dashed border-purple-400 bg-purple-500/10' 
-              : 'border-2 border-dashed border-slate-600 hover:border-slate-500'
+              : 'border-2 border-dashed border-gray-600 hover:border-slate-500'
           }`}
         >
           <input {...getInputProps()} />
@@ -86,7 +86,7 @@ const Documents: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
+        className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600"
       >
         <div className="flex items-center mb-4">
           <Zap className="w-6 h-6 text-yellow-400 mr-2" />
@@ -118,7 +118,7 @@ const Documents: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + index * 0.1 }}
-            className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+            className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
           >
             <div className="flex items-start justify-between">
               <div className="flex items-start space-x-4 flex-1">
@@ -148,7 +148,7 @@ const Documents: React.FC = () => {
                     {doc.aiTags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-slate-700 text-slate-300"
+                        className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-gray-700 text-slate-300"
                       >
                         {tag}
                       </span>
@@ -165,7 +165,7 @@ const Documents: React.FC = () => {
                 <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300">
                   Flashcards
                 </button>
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300">
                   Quiz
                 </button>
               </div>

@@ -36,7 +36,7 @@ const StudyBuddy: React.FC = () => {
   const quickActions = [
     { icon: BookOpen, label: 'Explain Concept', color: 'from-blue-500 to-cyan-500' },
     { icon: Lightbulb, label: 'Study Tips', color: 'from-green-500 to-emerald-500' },
-    { icon: MessageCircle, label: 'Quiz Me', color: 'from-purple-500 to-pink-500' },
+    { icon: MessageCircle, label: 'Quiz Me', color: 'from-blue-500 to-blue-600' },
     { icon: Volume2, label: 'Audio Mode', color: 'from-orange-500 to-red-500' }
   ];
 
@@ -55,7 +55,7 @@ const StudyBuddy: React.FC = () => {
           <select
             value={level}
             onChange={(e) => setLevel(e.target.value)}
-            className="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
             <option value="beginner">Beginner (ELI5)</option>
             <option value="intermediate">Intermediate</option>
@@ -68,7 +68,7 @@ const StudyBuddy: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
+        className="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600"
       >
         <div className="flex items-center mb-4">
           <Sparkles className="w-6 h-6 text-yellow-400 mr-2" />
@@ -88,7 +88,7 @@ const StudyBuddy: React.FC = () => {
       </motion.div>
 
       {/* Chat Container */}
-      <div className="flex-1 bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700 flex flex-col">
+      <div className="flex-1 bg-gray-800 rounded-xl border border-gray-700 flex flex-col">
         {/* Chat Messages */}
         <div className="flex-1 p-6 overflow-y-auto space-y-4">
           {mockConversation.map((msg, index) => (
@@ -103,8 +103,8 @@ const StudyBuddy: React.FC = () => {
                 <div
                   className={`rounded-2xl px-4 py-3 ${
                     msg.type === 'user'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                      : 'bg-slate-700 text-slate-100'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-700 text-slate-100'
                   }`}
                 >
                   <p className="text-sm leading-relaxed">{msg.message}</p>
@@ -129,7 +129,7 @@ const StudyBuddy: React.FC = () => {
         </div>
 
         {/* Chat Input */}
-        <div className="p-6 border-t border-slate-700">
+        <div className="p-6 border-t border-gray-700">
           <div className="flex space-x-4">
             <div className="flex-1 relative">
               <input
@@ -137,7 +137,7 @@ const StudyBuddy: React.FC = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Ask me anything about your studies..."
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 pr-12"
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 pr-12"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     // Handle send message
@@ -151,7 +151,7 @@ const StudyBuddy: React.FC = () => {
             </div>
             <button
               onClick={() => setMessage('')}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               <Send className="w-5 h-5" />
             </button>
@@ -168,7 +168,7 @@ const StudyBuddy: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setMessage(suggestion)}
-                className="bg-slate-700 hover:bg-slate-600 text-slate-300 text-sm px-3 py-1 rounded-full transition-colors"
+                className="bg-gray-700 hover:bg-slate-600 text-slate-300 text-sm px-3 py-1 rounded-full transition-colors"
               >
                 {suggestion}
               </button>
@@ -184,15 +184,15 @@ const StudyBuddy: React.FC = () => {
         transition={{ delay: 0.5 }}
         className="grid grid-cols-1 md:grid-cols-3 gap-4"
       >
-        <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
           <div className="text-2xl font-bold text-white">247</div>
           <div className="text-sm text-slate-400">Questions Asked</div>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
           <div className="text-2xl font-bold text-white">89%</div>
           <div className="text-sm text-slate-400">Concepts Understood</div>
         </div>
-        <div className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-4 border border-slate-700 text-center">
+        <div className="bg-gray-800 rounded-xl p-4 border border-gray-700 text-center">
           <div className="text-2xl font-bold text-white">15</div>
           <div className="text-sm text-slate-400">Study Sessions</div>
         </div>
