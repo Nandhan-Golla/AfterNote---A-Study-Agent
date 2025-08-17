@@ -71,7 +71,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* User stats */}
           <div className="px-6 pb-6">
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4 border border-purple-500/30">
+            <div className="bg-gray-700 rounded-lg p-4 border border-gray-600">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-slate-300">XP Points</span>
                 <Star className="w-4 h-4 text-yellow-400" />
