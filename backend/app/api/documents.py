@@ -83,7 +83,7 @@ async def upload_document(
         file_path=file_path,
         file_type=file.content_type,
         file_size=len(content),
-        owner_id="temp-user-id",  # TODO: Get from auth
+        owner_id=str(uuid.uuid4()),  # TODO: Get from auth
         folder_id=folder_id,
         extracted_text=extracted_text
     )
@@ -114,12 +114,14 @@ async def upload_document(
 async def get_documents(folder_id: str = None, db: Session = Depends(get_db)):
     """Get all documents, optionally filtered by folder"""
     
-    query = db.query(Document).filter(Document.owner_id == "temp-user-id")
+    # For demo purposes, return empty list since we don't have auth yet
+    # query = db.query(Document).filter(Document.owner_id == "temp-user-id")
+    documents = []
     
-    if folder_id:
-        query = query.filter(Document.folder_id == folder_id)
-    
-    documents = query.all()
+    # For demo purposes, return empty list
+    # if folder_id:
+    #     query = query.filter(Document.folder_id == folder_id)
+    # documents = query.all()
     
     return [
         DocumentResponse(

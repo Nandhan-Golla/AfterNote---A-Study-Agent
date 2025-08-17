@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     
     # AI Configuration
     GEMINI_API_KEY: str = "your-gemini-api-key-here"
-    GEMINI_MODEL: str = "gemini-pro"
+    GEMINI_MODEL: str = "gemini-1.5-flash"
     
     # Security
     SECRET_KEY: str = "your-super-secret-key-change-in-production"
@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     
     # Redis (for caching and real-time features)
     REDIS_URL: str = "redis://localhost:6379"
+    
+    # Development settings
+    DEBUG: bool = True
+    ENVIRONMENT: str = "development"
     
     class Config:
         env_file = ["backend/.env", ".env"]

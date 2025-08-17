@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 from pydantic import BaseModel
 from datetime import datetime
+import uuid
 
 from ..models.database import SessionLocal, Note, Folder
 from ..services.gemini_service import gemini_service
@@ -45,7 +46,7 @@ async def create_note(note: NoteCreate, db: Session = Depends(get_db)):
         title=note.title,
         content=note.content,
         folder_id=note.folder_id,
-        owner_id="temp-user-id"  # TODO: Get from auth
+        owner_id=str(uuid.uuid4())  # TODO: Get from auth
     )
     
     # Generate AI enhancements
@@ -72,12 +73,14 @@ async def create_note(note: NoteCreate, db: Session = Depends(get_db)):
 async def get_notes(folder_id: Optional[str] = None, db: Session = Depends(get_db)):
     """Get all notes, optionally filtered by folder"""
     
-    query = db.query(Note).filter(Note.owner_id == "temp-user-id")
+    # For demo purposes, return empty list since we don't have auth yet
+    # query = db.query(Note).filter(Note.owner_id == "temp-user-id")
+    notes = []
     
-    if folder_id:
-        query = query.filter(Note.folder_id == folder_id)
-    
-    notes = query.all()
+    # For demo purposes, return empty list
+    # if folder_id:
+    #     query = query.filter(Note.folder_id == folder_id)
+    # notes = query.all()
     
     return [
         NoteResponse(
