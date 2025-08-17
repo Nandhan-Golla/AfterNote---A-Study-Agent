@@ -50,13 +50,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         animate={{
           x: sidebarOpen ? 0 : '-100%',
         }}
-        className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-800/95 backdrop-blur-xl border-r border-slate-700 lg:static lg:translate-x-0"
+        className="fixed inset-y-0 left-0 z-50 w-64 bg-gray-800 border-r border-gray-700 lg:static lg:translate-x-0"
       >
         <div className="flex h-full flex-col">
           {/* Logo */}
           <div className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">AfterNote</span>
